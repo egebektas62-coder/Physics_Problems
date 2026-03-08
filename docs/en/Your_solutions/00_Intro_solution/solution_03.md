@@ -1,185 +1,100 @@
-# 3. Proportionality
+# 3. Proportionality: Universal Law of Gravitation
 
-## Necessary Definitions
+## Necessary Definitions and Formulas
 
-### Direct Proportionality
-A quantity is **directly proportional** to another if increasing one causes the other to increase by the same factor.
+### 1. Newton's Law of Universal Gravitation
+This law states that every particle attracts every other particle in the universe with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between their centers. 
 
-Example:
 
-$$
-y \propto x
-$$
 
-If \(x\) doubles, \(y\) also doubles.
-
----
-
-### Inverse Proportionality
-A quantity is **inversely proportional** to another if increasing one causes the other to decrease.
-
-Example:
-
-$$
-y \propto \frac{1}{x}
-$$
-
-If \(x\) doubles, \(y\) becomes half.
-
----
-
-### Inverse Square Law
-Some physical quantities depend on the **square of a distance in the denominator**.
-
-General form:
-
-$$
-F \propto \frac{1}{r^2}
-$$
-
-If the distance doubles, the force becomes:
-
-$$
-\frac{1}{2^2} = \frac{1}{4}
-$$
-
-of the original value.
-
----
-
-# Universal Law of Gravitation
-
-The gravitational force between two masses is given by:
+The formula is given by:
 
 $$
 F = G \frac{m_1 m_2}{r^2}
 $$
 
 Where:
+* **$F$**: Gravitational force
+* **$G$**: Gravitational constant
+* **$m_1, m_2$**: Masses of the two objects
+* **$r$**: Distance between the centers of the two masses
 
-- \(F\) — gravitational force  
-- \(G\) — gravitational constant  
-- \(m_1, m_2\) — masses  
-- \(r\) — distance between the centers  
-
----
-
-# Step 1: Define the Original Force
-
-Original force:
-
-$$
-F = G \frac{m_1 m_2}{r^2}
-$$
+### 2. Direct and Inverse Proportionality
+* **Direct Proportionality**: The force $F$ is directly proportional to the product of the masses ($m_1 m_2$). If the masses change, the force changes in the same direction.
+* **Inverse-Square Law**: The force $F$ is inversely proportional to the square of the distance ($r^2$). If the distance increases, the force decreases by the square of that change.
 
 ---
 
-# Step 2: Apply the Changes
+## Problem Statement
 
-According to the problem:
-
-- Distance **doubles**  
-
-$$
-r' = 2r
-$$
-
-- Both masses **are halved**
-
-$$
-m_1' = \frac{m_1}{2}
-$$
-
-$$
-m_2' = \frac{m_2}{2}
-$$
+Determine the factor by which the force $F$ changes if the distance $r$ is *doubled* and both masses ($m_1$ and $m_2$) are *halved*.
 
 ---
 
-# Step 3: Substitute Into the Formula
+## Step-by-Step Solution
 
-New force:
-
-$$
-F' = G \frac{m_1' m_2'}{(r')^2}
-$$
-
-Substitute the new values:
+### Step 1: Define the initial state
+Let the initial gravitational force be $F_1$. According to the standard formula:
 
 $$
-F' = G \frac{\left(\frac{m_1}{2}\right)\left(\frac{m_2}{2}\right)}{(2r)^2}
+F_1 = G \frac{m_1 m_2}{r^2}
 $$
 
----
+### Step 2: Define the new modified variables
+The problem states that distance is doubled and both masses are halved. We can represent the new variables as:
+* New distance: $r' = 2r$
+* New first mass: $m_1' = \frac{1}{2}m_1$
+* New second mass: $m_2' = \frac{1}{2}m_2$
 
-# Step 4: Simplify the Numerator
+### Step 3: Substitute the new variables into the gravitation formula
+Let the new gravitational force be $F_2$. We plug our new variables into the original equation:
 
 $$
-\left(\frac{m_1}{2}\right)\left(\frac{m_2}{2}\right) = \frac{m_1 m_2}{4}
+F_2 = G \frac{m_1' m_2'}{(r')^2}
 $$
 
-So:
+Substituting the expressions from Step 2:
 
 $$
-F' = G \frac{\frac{m_1 m_2}{4}}{(2r)^2}
+F_2 = G \frac{(\frac{1}{2}m_1) (\frac{1}{2}m_2)}{(2r)^2}
 $$
 
----
+### Step 4: Simplify the numerator and the denominator
+First, multiply the mass terms in the numerator:
 
-# Step 5: Simplify the Denominator
+$$
+(\frac{1}{2}m_1) (\frac{1}{2}m_2) = \frac{1}{4} m_1 m_2
+$$
+
+Next, square the distance term in the denominator:
 
 $$
 (2r)^2 = 4r^2
 $$
 
-Thus:
+Now, substitute these simplified parts back into the $F_2$ equation:
 
 $$
-F' = G \frac{\frac{m_1 m_2}{4}}{4r^2}
+F_2 = G \frac{\frac{1}{4} m_1 m_2}{4r^2}
 $$
 
----
-
-# Step 6: Combine the Fractions
-
-$$
-F' = G \frac{m_1 m_2}{16 r^2}
-$$
-
----
-
-# Step 7: Compare With the Original Force
-
-Original force:
+### Step 5: Isolate the original formula to find the factor
+To see how $F_2$ relates to $F_1$, we separate the numerical fractions from the variables:
 
 $$
-F = G \frac{m_1 m_2}{r^2}
+F_2 = \frac{\frac{1}{4}}{4} \times \left( G \frac{m_1 m_2}{r^2} \right)
 $$
 
-New force:
+Calculate the fraction: $\frac{1}{4} \div 4 = \frac{1}{16}$. 
+
+Since the expression in the parentheses is our initial force $F_1$, we can substitute it:
 
 $$
-F' = \frac{1}{16} G \frac{m_1 m_2}{r^2}
-$$
-
-Thus:
-
-$$
-F' = \frac{1}{16}F
+F_2 = \frac{1}{16} F_1
 $$
 
 ---
 
-# Final Answer
+## Final Result
 
-The gravitational force becomes
-
-$$
-\frac{1}{16}
-$$
-
-of the original force.
-
-This means the force **decreases by a factor of 16**.
-
----
+The new gravitational force $F_2$ is **$\frac{1}{16}$** of the original force. Therefore, the force decreases by a factor of **16**.
