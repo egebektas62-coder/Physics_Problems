@@ -1,150 +1,116 @@
-# Problem 4
+# 4. Vector Calculus: Velocity and Acceleration
 
-## Basic theory and formulas (vector kinematics)
+## Necessary Definitions and Formulas
 
-### 1) Position vector in 2D
-A position vector can be written as
-
-$$
-\vec r(t)=x(t)\,\hat i+y(t)\,\hat j,
-$$
-
-where:
-- $x(t)$ is the $x$-coordinate,
-- $y(t)$ is the $y$-coordinate,
-- $\hat i,\hat j$ are unit vectors in the $x$ and $y$ directions.
-
-### 2) Velocity is the time derivative of position
+### 1. Position Vector
+The position vector $\vec{r}(t)$ describes the location of a particle or object in space as a function of time $t$. In two dimensions, it is typically written using the standard unit vectors $\hat{i}$ (x-direction) and $\hat{j}$ (y-direction):
 
 $$
-\vec v(t)=\frac{d\vec r(t)}{dt}=\frac{dx(t)}{dt}\,\hat i+\frac{dy(t)}{dt}\,\hat j.
+\vec{r}(t) = x(t)\hat{i} + y(t)\hat{j}
 $$
 
-### 3) Acceleration is the time derivative of velocity
+
+
+### 2. Velocity Vector
+Velocity is the rate of change of position with respect to time. It is found by taking the first derivative of the position vector.
 
 $$
-\vec a(t)=\frac{d\vec v(t)}{dt}=\frac{d^2\vec r(t)}{dt^2}
-=\frac{d^2x(t)}{dt^2}\,\hat i+\frac{d^2y(t)}{dt^2}\,\hat j.
+\vec{v}(t) = \frac{d\vec{r}}{dt} = x'(t)\hat{i} + y'(t)\hat{j}
 $$
 
-### 4) Power rule (you will use it repeatedly)
+### 3. Acceleration Vector
+Acceleration is the rate of change of velocity with respect to time. It is found by taking the derivative of the velocity vector, which is equivalent to the second derivative of the position vector.
 
 $$
-\frac{d}{dt}\left(t^n\right)=n t^{n-1},\qquad
-\frac{d}{dt}(c)=0,\qquad
-\frac{d}{dt}(c\,f)=c\,\frac{df}{dt}.
+\vec{a}(t) = \frac{d\vec{v}}{dt} = \frac{d^2\vec{r}}{dt^2} = x''(t)\hat{i} + y''(t)\hat{j}
+$$
+
+### 4. The Power Rule for Derivatives
+To find the derivatives in this problem, we use the power rule, which states that for $f(t) = at^n$:
+
+$$
+f'(t) = a \cdot n \cdot t^{n-1}
 $$
 
 ---
 
-## Problem
+## Problem Statement
 
-Given:
-
-$$
-\vec r(t)=(3t^2)\hat i+(5t-8t^2)\hat j.
-$$
-
-Find $\vec v(t)$ and $\vec a(t)$.
+The position of an object is given by $\vec{r}(t) = (3t^2)\hat{i} + (5t - 8t^2)\hat{j}$. Find the object's velocity and acceleration vectors as a function of time.
 
 ---
 
-## Step 1: Identify component functions
+## Step-by-Step Solution
 
-Compare with $\vec r(t)=x(t)\hat i+y(t)\hat j$:
+### Step 1: Identify the components of the position vector
+We are given the position vector:
 
-- $x(t)=3t^2$
-- $y(t)=5t-8t^2$
+$$
+\vec{r}(t) = (3t^2)\hat{i} + (5t - 8t^2)\hat{j}
+$$
 
-**Comment:** We differentiate each component separately, then rebuild the vector.
+From this, we can separate the horizontal ($x$) and vertical ($y$) components:
+* $x(t) = 3t^2$
+* $y(t) = 5t - 8t^2$
+
+### Step 2: Calculate the velocity vector ($\vec{v}(t)$)
+To find the velocity vector, we take the first derivative of each component with respect to time $t$.
+
+For the $x$-component:
+
+$$
+v_x(t) = \frac{d}{dt}(3t^2) = 6t
+$$
+
+For the $y$-component:
+
+$$
+v_y(t) = \frac{d}{dt}(5t - 8t^2) = 5 - 16t
+$$
+
+Now, combine these components back into vector notation:
+
+$$
+\vec{v}(t) = (6t)\hat{i} + (5 - 16t)\hat{j}
+$$
+
+### Step 3: Calculate the acceleration vector ($\vec{a}(t)$)
+To find the acceleration vector, we take the derivative of the velocity vector components with respect to time $t$.
+
+For the $x$-component:
+
+$$
+a_x(t) = \frac{d}{dt}(6t) = 6
+$$
+
+For the $y$-component:
+
+$$
+a_y(t) = \frac{d}{dt}(5 - 16t) = -16
+$$
+
+Combine these constant components into vector notation:
+
+$$
+\vec{a}(t) = 6\hat{i} - 16\hat{j}
+$$
 
 ---
 
-## Step 2: Compute velocity $\vec v(t)=\dfrac{d\vec r}{dt}$
+## Final Result
 
-### $x$-component of velocity
+For the given position vector $\vec{r}(t) = (3t^2)\hat{i} + (5t - 8t^2)\hat{j}$:
 
-$$
-v_x(t)=\frac{dx}{dt}=\frac{d}{dt}(3t^2).
-$$
-
-Use constant multiple rule + power rule:
+* **Velocity Vector**: 
 
 $$
-\frac{d}{dt}(3t^2)=3\cdot 2t^{1}=6t.
+\vec{v}(t) = (6t)\hat{i} + (5 - 16t)\hat{j}
 $$
 
-So:
+* **Acceleration Vector**: 
 
 $$
-v_x(t)=6t.
+\vec{a}(t) = 6\hat{i} - 16\hat{j}
 $$
 
-### $y$-component of velocity
-
-$$
-v_y(t)=\frac{dy}{dt}=\frac{d}{dt}(5t-8t^2).
-$$
-
-Differentiate term by term:
-- $\frac{d}{dt}(5t)=5$
-- $\frac{d}{dt}(-8t^2)=-8\cdot 2t=-16t$
-
-So:
-
-$$
-v_y(t)=5-16t.
-$$
-
-### Combine into the velocity vector
-
-$$
-\boxed{\vec v(t)=(6t)\hat i+(5-16t)\hat j.}
-$$
-
-**Comment:** Velocity tells you how fast and in what direction the position changes at time $t$.
-
----
-
-## Step 3: Compute acceleration $\vec a(t)=\dfrac{d\vec v}{dt}$
-
-### $x$-component of acceleration
-
-$$
-a_x(t)=\frac{dv_x}{dt}=\frac{d}{dt}(6t)=6.
-$$
-
-### $y$-component of acceleration
-
-$$
-a_y(t)=\frac{dv_y}{dt}=\frac{d}{dt}(5-16t).
-$$
-
-- $\frac{d}{dt}(5)=0$
-- $\frac{d}{dt}(-16t)=-16$
-
-So:
-
-$$
-a_y(t)=-16.
-$$
-
-### Combine into the acceleration vector
-
-$$
-\boxed{\vec a(t)=6\,\hat i-16\,\hat j.}
-$$
-
-**Comment:** The acceleration here is **constant** (does not depend on $t$), meaning the velocity changes linearly with time.
-
----
-
-## Final answers
-
-$$
-\boxed{\vec v(t)=(6t)\hat i+(5-16t)\hat j}
-$$
-
-$$
-\boxed{\vec a(t)=6\,\hat i-16\,\hat j}
-$$
+*(Note that the acceleration vector contains no $t$ terms, meaning the object experiences constant acceleration).*
