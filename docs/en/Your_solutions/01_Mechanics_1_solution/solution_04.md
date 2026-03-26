@@ -53,7 +53,8 @@ From this, we can separate the horizontal ($x$) and vertical ($y$) components:
 * $x(t) = 3t^2$
 * $y(t) = 5t - 8t^2$
 
-### Step 2: Calculate the velocity vector ($\vec{v}(t)$)
+### Step 2: Calculate the velocity vector
+
 To find the velocity vector, we take the first derivative of each component with respect to time $t$.
 
 For the $x$-component:
@@ -74,8 +75,27 @@ $$
 \vec{v}(t) = (6t)\hat{i} + (5 - 16t)\hat{j}
 $$
 
-### Step 3: Calculate the acceleration vector ($\vec{a}(t)$)
+### Step 3: Calculate the acceleration vector
+
 To find the acceleration vector, we take the derivative of the velocity vector components with respect to time $t$.
+
+For the $x$-component:
+
+$$
+a_x(t) = \frac{d}{dt}(6t) = 6
+$$
+
+For the $y$-component:
+
+$$
+a_y(t) = \frac{d}{dt}(5 - 16t) = -16
+$$
+
+Now, combine these components back into vector notation:
+
+$$
+\vec{a}(t) = 6\hat{i} - 16\hat{j}
+$$
 
 For the $x$-component:
 
