@@ -94,9 +94,3 @@ $$
 * **Direction:** Undefined (or none, as the net force is perfectly balanced to zero)
 
 ---
-
-**Hocaya Karşı Şov Notu (Siber Güvenlikçi Yaklaşımı):**
-
-Eğer hoca *"Ege, bu kadar devasa yükler (1 Coulomb fizikte devasa bir yüktür) ortada nasıl 0 N kuvvet yaratıyor?"* diye sorarsa, vereceğin "Mühendis" cevabı şudur:
-
-*"Hocam bu durum, bilgisayar ağlarındaki 'Denial of Service' (DDoS) saldırılarına karşı uygulanan 'Null Routing' (Kara Delik) yönlendirmesi veya simetrik yük dağıtımı (Load Balancing) gibidir. Sistemin merkezine dört bir yandan devasa büyüklükte bir trafik (kuvvet) geliyor. Ancak vektörel topoloji o kadar kusursuz bir simetriye sahip ki, her bir kuvvet vektörü kendi anti-vektörünü sıfırlıyor. Sistemin üzerindeki 'stres' (Tension) milyarlarca Newton olmasına rağmen, sistemin net ivmelenmesi (Net Payload) tam olarak sıfırdır."*
