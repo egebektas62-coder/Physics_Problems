@@ -56,9 +56,3 @@ $$
 * **Total Electric Flux ($\Phi_E$):** $\approx 2.259 \times 10^{11} \text{ N}\cdot\text{m}^2/\text{C}$
 
 ---
-
-**Hocaya Karşı Şov Notu (Siber Güvenlikçi Yaklaşımı):**
-
-Eğer hoca *"Ege, kürenin yarıçapı 1 metre değil de 1000 kilometre olsaydı akı (flux) neden değişmezdi, bunu bana fiziksel olmayan bir şekilde açıklar mısın?"* diye sorarsa, vereceğin siber mühendis cevabı şudur:
-
-*"Hocam bu durum Ağ Güvenliğinde (Network Security) 'Data Loss Prevention (DLP)' mekanizmasıyla birebir aynıdır. Merkezdeki +2C'lik yük, dışarıya saniyede 10 Gigabit veri paketi broadcast eden bir ana sunucudur (Core Server). Çizdiğimiz o hayali Gauss küresi ise bizim Güvenlik Duvarı (Firewall) perimetremizdir. Güvenlik duvarını ister hemen sunucu odasının kapısına kuralım (r = 1m), istersek şirketin dış internet çıkışına kuralım (r = 1000 km), o perimetreyi delip dışarı çıkan toplam veri paketi sayısı (Toplam Akı / Total Flux) her zaman içerideki sunucunun ürettiği kadardır. Veri ağda ne kadar yayılırsa yayılsın, dışarı çıkan toplam 'Payload' miktarı değişmez. Yarıçap (r) sadece bant genişliğini (Bandwidth / Electric Field Strength) seyreltir, ama toplam trafiği (Flux) değiştiremez."*
