@@ -81,9 +81,3 @@ $$
 * **Direction:** Perpendicular to the plane containing the wires, pointing in the same direction for both (e.g., "into the page" or "out of the page" depending on the chosen spatial orientation of the opposite currents).
 
 ---
-
-**Hocaya Karşı Şov Notu (Siber Güvenlikçi Yaklaşımı):**
-
-Eğer hoca *"Ege, bu iki teldeki akım zıt yönlü olmasaydı da aynı yönde olsaydı ortadaki manyetik alan ne olurdu ve bu mühendislikte ne işimize yarıyor?"* diye sorarsa, tam gediğine oturtacağın cevap şudur:
-
-*"Hocam eğer akımlar aynı yönde olsaydı, Sağ El Kuralı gereği ortadaki vektörler birbirini kusursuz bir şekilde sıfırlardı (B_net = 0). Biz bu fiziksel 'Vektörel İptal' (Vector Cancellation) kuralını Ağ Mimarisinde (Network Architecture) 'Twisted Pair' (CAT6 ethernet kabloları) teknolojisinde kullanırız. Ethernet kablosunun içindeki teller, dışarıdan gelen elektromanyetik girişimi (EMI/Gürültü) engellemek için, aynı sinyali biri pozitif diğeri negatif (zıt akım) olacak şekilde taşır ('Differential Signaling'). Böylece sistem kendi yarattığı manyetik alanı dışarıya sızdırmaz ve dışarıdan gelen manyetik parazitleri de teller üzerindeki zıt etkileşimle anında sıfırlar. Yani Ampere Yasası olmasaydı, bugün Gigabit hızında güvenli veri iletemezdik."*
