@@ -76,7 +76,9 @@ $$
 f \approx 5.45 \times 10^{14} \text{ Hz}
 $$
 
-*(This can also be expressed as $545 \times 10^{12} \text{ Hz}$, which is $545 \text{ THz}$ or Terahertz).*
+> This can also be expressed as:
+> $$545 \times 10^{12} \text{ Hz}$$
+> *(which is 545 THz or Terahertz).*
 
 ---
 
