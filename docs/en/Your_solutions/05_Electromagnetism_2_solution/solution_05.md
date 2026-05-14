@@ -12,12 +12,12 @@ C = \frac{\varepsilon_0 \cdot S}{d}
 $$
 
 Where:
-*   **$\varepsilon_0$**: Vacuum permittivity ($\approx 8.854 \times 10^{-12} \text{ F/m}$).
-*   **$S$**: Area of one of the plates.
-*   **$d$**: Separation distance between the plates.
+* **$\varepsilon_0$**: Vacuum permittivity ($\approx 8.854 \times 10^{-12} \text{ F/m}$).
+* **$S$**: Area of one of the plates.
+* **$d$**: Separation distance between the plates.
 
-### 2. Energy Stored in a Capacitor ($U_{energy}$)
-The work done to charge a capacitor is stored as potential energy in its electric field. *(Note: The prompt uses $U$ for both voltage and energy. To avoid confusion in the math, we will denote voltage as $V$ or $U_{voltage}$ and energy as $W$ or $U_{energy}$)*.
+### 2. Energy Stored in a Capacitor ($W$)
+The work done to charge a capacitor is stored as potential energy in its electric field. *(Note: To avoid confusion, we will denote the given voltage as $U$ and the stored energy as $W$)*.
 
 $$
 W = \frac{1}{2} C U^2
@@ -37,16 +37,20 @@ $$
 F = \frac{1}{2} \varepsilon_0 E^2 S
 $$
 
-Alternatively, it can be derived from the stored energy: $F = \frac{W}{d}$.
+Alternatively, it can be derived from the stored energy:
+
+$$
+F = \frac{W}{d}
+$$
 
 ---
 
 ## Step-by-Step Solution
 
 Let's summarize the given parameters and convert them into standard SI units:
-*   **Area ($S$):** $0.02 \text{ m}^2$
-*   **Distance ($d$):** $5 \text{ mm} = 0.005 \text{ m}$
-*   **Voltage ($U$):** $500 \text{ V}$
+* **Area ($S$):** $0.02 \text{ m}^2$
+* **Distance ($d$):** $5 \text{ mm} = 0.005 \text{ m}$
+* **Voltage ($U$):** $500 \text{ V}$
 
 ### 1. Calculate the capacitance $C$ of the capacitor
 Using the geometric formula for parallel-plate capacitance, we plug in the vacuum permittivity constant, the area, and the distance.
@@ -104,4 +108,9 @@ $$
 
 **$F = 8.854 \times 10^{-4} \text{ N}$**
 
-*(Self-check using the other formula: $F = 0.5 \cdot 8.854 \times 10^{-12} \cdot (10^5)^2 \cdot 0.02 = 8.854 \times 10^{-4} \text{ N}$. The results match perfectly).*
+> **Self-check using the primary force formula:**
+> $$F = \frac{1}{2} \varepsilon_0 E^2 S$$
+> $$F = 0.5 \cdot (8.854 \times 10^{-12}) \cdot (10^5)^2 \cdot 0.02$$
+> $$F = 8.854 \times 10^{-4} \text{ N}$$
+> 
+> *The results match perfectly.*
