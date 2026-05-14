@@ -23,7 +23,7 @@ $$
 E = h \cdot f = \frac{h \cdot c}{\lambda}
 $$
 
-*(Where $h$ is Planck's constant). This tells us that shorter wavelengths carry more energy (like Gamma rays), while longer wavelengths carry less energy (like Radio waves).*
+(Where $h$ is Planck's constant). This tells us that shorter wavelengths carry more energy (like Gamma rays), while longer wavelengths carry less energy (like Radio waves).
 
 ---
 
