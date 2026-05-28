@@ -1,49 +1,70 @@
-# Average Current of a Lightning Bolt
+## 11. Power & Energy
 
-## Necessary Definitions and Formulas
+### Necessary Definitions and Formulas
 
-### Average Electric Current ($I_{avg}$)
-Average current is the total amount of electric charge ($\Delta Q$) that passes through a given cross-sectional area divided by the time interval ($\Delta t$) it takes for that charge to pass.
+#### 1. Electric Power (P)
+Power is the rate at which electrical energy is transferred or dissipated by an electric circuit. When voltage ($V$) and resistance ($R$) are known, power ($P$) can be calculated as:
 
 $$
-I_{avg} = \frac{\Delta Q}{\Delta t}
+P = \frac{V^2}{R}
 $$
 
-Where:
-* $I_{avg}$: Average current (in Amperes, A)
-* $\Delta Q$: Total charge transferred (in Coulombs, C)
-* $\Delta t$: Time duration (in seconds, s)
+#### 2. Electrical Energy (E)
+Energy is the total amount of power consumed over a specific period of time ($t$). To calculate energy in standard SI units (Joules), time must be in seconds.
+
+$$
+E = P \cdot t
+$$
 
 ---
 
-## Step-by-Step Solution
+### Step-by-Step Solution
 
-Let's identify the given parameters and convert them to standard SI units:
-* **Charge ($\Delta Q$):** $30\ \text{C}$
-* **Time ($\Delta t$):** $2\ \text{ms} = 2 \times 10^{-3}\ \text{s} = 0.002\ \text{s}$
+Let's identify the known variables from the problem:
+* **Resistance:** 100 Ohms
+* **Voltage:** 50 V
+* **Time:** 5 minutes
 
-### Step 1: Apply the average current formula
-Substitute the standard unit values into the average current equation:
-
-$$
-I_{avg} = \frac{\Delta Q}{\Delta t}
-$$
+#### Step 1: Calculate the Power Dissipated
+Substitute the given voltage and resistance into the power formula:
 
 $$
-I_{avg} = \frac{30}{0.002}
+P = \frac{50^2}{100}
 $$
 
-### Step 2: Calculate the final value
-Perform the division to find the current in Amperes:
-
 $$
-I_{avg} = 15,000\ \text{A}
+P = \frac{2500}{100}
 $$
 
-*(This can also be expressed as $15\ \text{kA}$ or kiloamperes).*
+$$
+P = 25\ \text{W}
+$$
+
+#### Step 2: Convert Time to Seconds
+To find the energy in Joules, convert the time from minutes to standard SI units (seconds):
+
+$$
+t = 5 \cdot 60
+$$
+
+$$
+t = 300\ \text{s}
+$$
+
+#### Step 3: Calculate the Energy Consumed
+Multiply the power (in Watts) by the time (in seconds) to find the total energy consumed:
+
+$$
+E = 25 \cdot 300
+$$
+
+$$
+E = 7500\ \text{J}
+$$
 
 ---
 
-## Final Result
+### Final Results Summary
 
-The average current of the lightning bolt is **$15,000\ \text{A}$** (or $15\ \text{kA}$).
+* **Power Dissipated:** 25 W
+* **Energy Consumed:** 7500 J
