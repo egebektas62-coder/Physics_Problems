@@ -1,98 +1,85 @@
-# Mixed Circuit: Equivalent Resistance (Diamond Layout)
+## 4. Mixed Circuit
 
-## Necessary Definitions and Formulas
+Calculate the equivalent resistance for the circuit shown in the figure. All resistors have a resistance of $10\ \Omega$.
 
-Although the visual layout is different, analyzing the nodes reveals that this circuit is another classic **Wheatstone Bridge**.
+---
 
-### 1. Resistors in Series
-When resistors are in the same path with no junctions in between:
+### Necessary Definitions and Formulas
+
+To solve this circuit, we break it down into simpler sections using the fundamental rules for series and parallel resistors.
+
+#### 1. Resistors in Series
+When resistors are connected end-to-end along a single path, their equivalent resistance is the sum of their individual values:
 
 $$
-R_{series} = R_1 + R_2
+R_{series} = R_1 + R_2 + \dots
 $$
 
-### 2. Resistors in Parallel
-When resistors share the same starting and ending nodes:
+#### 2. Resistors in Parallel
+When two resistors are connected across the exact same two electrical nodes, their equivalent resistance is calculated as:
 
 $$
 R_{parallel} = \frac{R_1 \cdot R_2}{R_1 + R_2}
 $$
 
-### 3. Balanced Wheatstone Bridge Condition
-If the ratio of the resistances on the two parallel legs is equal, the bridge is balanced:
-
-$$
-\frac{R_1}{R_4} = \frac{R_2}{R_5}
-$$
-
-If balanced, the middle resistor (the "bridge") has zero potential difference across it. Therefore, no current flows through it, and it behaves as an open circuit (it can be removed).
-
 ---
 
-## Step-by-Step Solution
+### Step-by-Step Solution
 
-Let's label the resistors based on the standard Wheatstone Bridge topology. The problem states that ALL resistors have a resistance of **$10\ \Omega$**:
-* $R_1$ (Top-left) = $10\ \Omega$
-* $R_2$ (Top-right) = $10\ \Omega$
-* $R_3$ (Middle/Bridge) = $10\ \Omega$
-* $R_4$ (Bottom-left) = $10\ \Omega$
-* $R_5$ (Bottom-right) = $10\ \Omega$
+Let's break the circuit down into distinct sections. The input splits into a **Top Branch** and a **Bottom Branch** which then rejoin at a common node, followed by a **Final Resistor** at the output.
 
-### Step 1: Check if the bridge is balanced
-We test the balanced condition using our left and right ratios:
-
-$$
-\frac{R_1}{R_4} = \frac{R_2}{R_5}
-$$
-
-$$
-\frac{10}{10} = \frac{10}{10} \implies 1 = 1
-$$
-
-The condition is met. The bridge is perfectly balanced.
-
-### Step 2: Simplify the circuit
-Because the bridge is balanced, the voltage at the top junction equals the voltage at the bottom junction. No current flows through the middle resistor ($R_3$). We can virtually remove $R_3$ from our calculations.
-
-The circuit now simplifies to two parallel branches:
-* **Top Branch:** $R_1$ and $R_2$ are now in series.
-* **Bottom Branch:** $R_4$ and $R_5$ are now in series.
-
-### Step 3: Calculate the resistance of each branch
-
-**Top Branch ($R_{top}$):**
-
-$$
-R_{top} = R_1 + R_2
-$$
+#### Step 1: Analyze the Top Branch
+The top branch contains exactly two resistors connected in series. 
 
 $$
 R_{top} = 10 + 10 = 20\ \Omega
 $$
 
-**Bottom Branch ($R_{bottom}$):**
+#### Step 2: Analyze the Bottom Branch
+The bottom branch contains one resistor in series with a parallel pair of resistors.
+First, calculate the equivalent resistance of the parallel pair:
 
 $$
-R_{bottom} = R_4 + R_5
+R_{pair} = \frac{10 \cdot 10}{10 + 10} = \frac{100}{20} = 5\ \Omega
+$$
+
+Now, add the first resistor of the bottom branch, which is in series with this pair:
+
+$$
+R_{bottom} = 10 + 5 = 15\ \Omega
+$$
+
+#### Step 3: Combine the Top and Bottom Branches
+The entire Top Branch ($20\ \Omega$) is in parallel with the entire Bottom Branch ($15\ \Omega$). Let's find the equivalent resistance of this central parallel block ($R_{block}$):
+
+$$
+R_{block} = \frac{R_{top} \cdot R_{bottom}}{R_{top} + R_{bottom}}
 $$
 
 $$
-R_{bottom} = 10 + 10 = 20\ \Omega
-$$
-
-### Step 4: Calculate the total equivalent resistance ($R_{eq}$)
-Now, we find the equivalent resistance of the $20\ \Omega$ top branch and the $20\ \Omega$ bottom branch, which are in parallel.
-
-$$
-R_{eq} = \frac{R_{top} \cdot R_{bottom}}{R_{top} + R_{bottom}}
+R_{block} = \frac{20 \cdot 15}{20 + 15}
 $$
 
 $$
-R_{eq} = \frac{20 \cdot 20}{20 + 20}
+R_{block} = \frac{300}{35} = \frac{60}{7}\ \Omega
+$$
+
+#### Step 4: Calculate the Final Equivalent Resistance ($R_{eq}$)
+The entire parallel block we just calculated is connected in series with the final rightmost resistor ($10\ \Omega$). We add them together to find the total equivalent resistance of the circuit:
+
+$$
+R_{eq} = R_{block} + 10
 $$
 
 $$
-R_{eq} = \frac{400}{40}
+R_{eq} = \frac{60}{7} + \frac{70}{7}
 $$
 
-**$R_{eq} = 10\ \Omega$**
+$$
+R_{eq} = \frac{130}{7}\ \Omega
+$$
+
+---
+
+### Final Result
+**$R_{eq} = \frac{130}{7}\ \Omega$** (or approximately **$18.57\ \Omega$**)
