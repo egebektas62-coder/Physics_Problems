@@ -4,6 +4,26 @@ Calculate the equivalent resistance for the circuit shown in the figure. All res
 
 ---
 
+### Necessary Definitions and Formulas
+
+To solve this circuit, we need to break it down using the basic rules for combining resistors.
+
+#### 1. Resistors in Series
+When resistors share a single path and carry the exact same current, their equivalent resistance is the sum of their individual resistances:
+
+$$
+R_{series} = R_1 + R_2 + \dots
+$$
+
+#### 2. Resistors in Parallel
+When resistors are connected across the exact same pair of electrical nodes, their equivalent resistance for two resistors is calculated as:
+
+$$
+R_{parallel} = \frac{R_1 \cdot R_2}{R_1 + R_2}
+$$
+
+---
+
 ### Topology Analysis & Node Identification
 
 To solve this circuit accurately, we must identify the electrical nodes (represented by the thick black dots) and count every distinct resistor block drawn. There are exactly **8 resistors** in this diagram. 
@@ -63,4 +83,10 @@ R_{eq} = \frac{16 \cdot 5}{16 + 5}
 $$
 
 $$
-R_{eq} = \frac{80}{21}\ \Omega \approx
+R_{eq} = \frac{80}{21}\ \Omega \approx 3.81\ \Omega
+$$
+
+---
+
+### Final Result
+**$R_{eq} = \frac{80}{21}\ \Omega$** (or approximately **$3.81\ \Omega$**)
