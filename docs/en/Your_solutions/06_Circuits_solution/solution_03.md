@@ -1,100 +1,66 @@
-# Mixed Circuit: Equivalent Resistance
+## 3. Mixed Circuit
 
-## Necessary Definitions and Formulas
-
-Before diving into the math, we need to recognize the specific layout of this circuit. It is a classic **Wheatstone Bridge**.
-
-### 1. Resistors in Series
-When resistors are connected end-to-end, their total resistance adds up:
-
-$$
-R_{series} = R_1 + R_2
-$$
-
-### 2. Resistors in Parallel
-When resistors are connected across the same two nodes, the equivalent resistance is calculated as:
-
-$$
-R_{parallel} = \frac{R_1 \cdot R_2}{R_1 + R_2}
-$$
-
-### 3. Balanced Wheatstone Bridge
-If a circuit has a bridge-like structure (as in the given figure), we must check the ratio of the opposing arms. If the ratios are equal, the bridge is **balanced**:
-
-$$
-\frac{R_1}{R_4} = \frac{R_2}{R_5}
-$$
-
-**Crucial Rule:** In a balanced Wheatstone bridge, the electrical potential (voltage) on both sides of the middle resistor ($R_3$) is identical. Since there is no potential difference, **no current flows through the middle resistor**. Therefore, $R_3$ acts like an open circuit and can be completely removed from our calculations!
+Calculate the equivalent resistance for the circuit shown in the figure. All resistors have a resistance of $5\ \Omega$.
 
 ---
 
-## Step-by-Step Solution
+### Topology Analysis & Node Identification
 
-Let's extract our known variables. The problem states that ALL resistors have a resistance of **$5\ \Omega$**:
-* $R_1 = 5\ \Omega$
-* $R_2 = 5\ \Omega$
-* $R_3 = 5\ \Omega$
-* $R_4 = 5\ \Omega$
-* $R_5 = 5\ \Omega$
+To solve this circuit accurately, we must identify the electrical nodes (represented by the thick black dots) and count every distinct resistor block drawn. There are exactly **8 resistors** in this diagram. 
 
-### Step 1: Check if the bridge is balanced
-We test the condition for a balanced Wheatstone bridge using our values:
+Let's label the three main junctions (nodes):
+* **Node L (Left Input):** The dot on the bottom-left. It connects the input terminal, the upward left branch, and the inner rightward branch.
+* **Node T (Top Center):** The dot on the top wire. It connects the upper-left branch, the inner vertical branch, and the rightward branch.
+* **Node R (Right Output):** The dot on the bottom-right. It connects the bottom wire, the right vertical branch, and the output terminal.
 
-$$
-\frac{R_1}{R_4} = \frac{R_2}{R_5}
-$$
+### Step-by-Step Solution
 
-$$
-\frac{5}{5} = \frac{5}{5} \implies 1 = 1
-$$
+#### Step 1: Analyze the paths from Node L to Node T
+There are two separate paths operating in parallel between the Left Node and the Top Node.
 
-Because the ratios are perfectly equal, the bridge is balanced.
+1.  **Outer Top-Left Branch:** The current goes up through one vertical resistor, turns the corner, and goes right through one horizontal resistor.
+    * These 2 resistors are in series.
+    * $R_{branch1} = 5 + 5 = 10\ \Omega$
 
-### Step 2: Redraw/Simplify the circuit (Remove $R_3$)
-Since the bridge is balanced, the voltage at the top node (between $R_1$ and $R_2$) equals the voltage at the bottom node (between $R_4$ and $R_5$). No current passes through $R_3$. We virtually "cut" $R_3$ out of the circuit.
+2.  **Inner "L" Branch:** The current goes right through one horizontal resistor, turns the corner, and goes up through **two** distinct vertical resistors.
+    * These 3 resistors are in series.
+    * $R_{branch2} = 5 + 5 + 5 = 15\ \Omega$
 
-Now, the simplified circuit consists of:
-* A top branch with $R_1$ and $R_2$ in series.
-* A bottom branch with $R_4$ and $R_5$ in series.
-* These two branches are in parallel with each other.
-
-### Step 3: Calculate the resistance of the branches
-Calculate the equivalent resistance for the top branch ($R_{top}$) and bottom branch ($R_{bottom}$).
-
-**Top Branch:**
+Now, we calculate the equivalent resistance of these two parallel branches ($R_{LT}$):
 
 $$
-R_{top} = R_1 + R_2
+R_{LT} = \frac{R_{branch1} \cdot R_{branch2}}{R_{branch1} + R_{branch2}}
 $$
 
 $$
-R_{top} = 5 + 5 = 10\ \Omega
+R_{LT} = \frac{10 \cdot 15}{10 + 15} = \frac{150}{25} = 6\ \Omega
 $$
 
-**Bottom Branch:**
+#### Step 2: Analyze the path from Node T to Node R
+From the Top Node, the current travels to the Right Node through the far-right vertical branch.
+* This branch contains **two** vertical resistors in series.
+* $R_{TR} = 5 + 5 = 10\ \Omega$
+
+#### Step 3: Calculate the total upper network resistance
+The entire upper section of the circuit forces current to flow from Node L, through Node T, to Node R. Therefore, the equivalent resistance $R_{LT}$ is in series with $R_{TR}$:
 
 $$
-R_{bottom} = R_4 + R_5
+R_{upper} = R_{LT} + R_{TR} = 6 + 10 = 16\ \Omega
+$$
+
+#### Step 4: Calculate the final Equivalent Resistance ($R_{eq}$)
+Finally, the entire upper network ($16\ \Omega$) is in parallel with the very bottom wire that directly connects Node L to Node R.
+* The bottom wire contains **one** horizontal resistor: $R_{bottom} = 5\ \Omega$
+
+We combine $R_{upper}$ and $R_{bottom}$ in parallel to find the total equivalent resistance of the circuit:
+
+$$
+R_{eq} = \frac{R_{upper} \cdot R_{bottom}}{R_{upper} + R_{bottom}}
 $$
 
 $$
-R_{bottom} = 5 + 5 = 10\ \Omega
-$$
-
-### Step 4: Calculate the total equivalent resistance ($R_{eq}$)
-Finally, we find the equivalent resistance of $R_{top}$ and $R_{bottom}$ which are now in parallel.
-
-$$
-R_{eq} = \frac{R_{top} \cdot R_{bottom}}{R_{top} + R_{bottom}}
+R_{eq} = \frac{16 \cdot 5}{16 + 5}
 $$
 
 $$
-R_{eq} = \frac{10 \cdot 10}{10 + 10}
-$$
-
-$$
-R_{eq} = \frac{100}{20}
-$$
-
-**$R_{eq} = 5\ \Omega$**
+R_{eq} = \frac{80}{21}\ \Omega \approx
